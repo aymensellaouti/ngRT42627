@@ -1,3 +1,13 @@
 x<input [(ngModel)]="x" type="number" class="form-control">
 y<input [(ngModel)]="y" type="number" class="form-control">
 <p>{{x()}} + {{y()}} = {{z()}} </p>
+<p (click)="addName()">
+Nous avons {{namesLength()}} names
+
+</p>
+
+<ol>
+  @for (name of names(); track $index ) {
+    <li>{{name}}</li>
+  }
+</ol>
