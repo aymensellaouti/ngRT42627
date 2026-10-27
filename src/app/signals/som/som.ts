@@ -1,8 +1,9 @@
 import { Component, computed, effect, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, NgForOf, NgIf],
   selector: 'app-som',
   styleUrl: './som.css',
   templateUrl: './som.html',

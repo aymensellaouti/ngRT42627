@@ -5,9 +5,26 @@ y<input [(ngModel)]="y" type="number" class="form-control">
 Nous avons {{namesLength()}} names
 
 </p>
-
+<!-- New -->
 <ol>
   @for (name of names(); track $index ) {
     <li>{{name}}</li>
+  } @empty {
+    <p>Il n'y a pas de name</p>
   }
 </ol>
+<!-- old -->
+<ol>
+  <li *ngFor="let name of names()">
+    {{name}}
+  </li>
+</ol>
+
+<div *ngIf="names().length">
+  J'ai du contenu
+</div>
+@if (names().length) {
+  <div >
+    J'ai du contenu
+  </div>
+}
