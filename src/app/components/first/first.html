@@ -1,2 +1,8 @@
-<p>first works!</p>
+<p [hidden]="isHidden()">Hello {{section()}}</p>
+<button (click)="showHide()" class="btn btn-danger">
+  show / Hide
+</button>
+<input  #myInput (change)="changeMessage(myInput.value)" type="text" class="form-control">
+<p>Le contenu de l'input est : {{message()}}</p>
 <app-second />
+<input [(ngModel)]="message" type="text" class="form-control">
