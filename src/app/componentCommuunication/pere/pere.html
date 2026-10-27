@@ -1,4 +1,10 @@
-<p >pere works!</p>
+<p appHighlight>pere works!</p>
+<hr>
+<p appHighlight [in]="'red'" [out]="'white'">pere works!</p>
+<hr>
+<p appHighlight [in]="'white'" [out]="'black'">pere works!</p>
+<hr>
+<p appHighlight [in]="'green'" [out]="'yellow'">pere works!</p>
 
 <hr>
 <app-fils (sendMessageToPapa)="handleSonMessage($event)" [message]="'Bara echri el khobz'" />

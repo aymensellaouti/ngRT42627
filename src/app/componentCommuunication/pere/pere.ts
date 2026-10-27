@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Fils } from '../fils/fils';
+import { Highlight } from '../../directives/highlight';
 
 @Component({
-  imports: [Fils],
+  imports: [Fils, Highlight],
   selector: 'app-pere',
   styleUrl: './pere.css',
   templateUrl: './pere.html',
