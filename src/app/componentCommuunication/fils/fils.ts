@@ -1,4 +1,5 @@
-import { Component, input, output, signal } from '@angular/core';
+import { Component, inject, input, output, signal } from '@angular/core';
+import { LoggerService } from '../../service/logger.service';
 
 @Component({
   imports: [],
@@ -7,6 +8,10 @@ import { Component, input, output, signal } from '@angular/core';
   templateUrl: './fils.html',
 })
 export class Fils {
+  loggerService = inject(LoggerService);
+  constructor() {
+    this.loggerService.log('Je suis le fils Component')
+  }
   messageDePapa = input.required({
     // eli bech i3ayet lel input hadha lazem i3ayetlou message
     alias: 'message',
